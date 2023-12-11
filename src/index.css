@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,180 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  background: rgb(229,229,229);
+  background: radial-gradient(circle, rgba(229,229,229,1) 18%, rgba(251,249,240,1) 43%, rgba(255,253,243,1) 57%, rgba(234,234,234,1) 84%);
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 600px;
+  height: 250px;
+}
+
+.first_h {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.cookie_btn {
+  padding: 12px 24px;
+  background-color: hsl(0, 0%, 47%);
+  color: hsl(0, 0%, 82%);
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1;
+  scale: 1.2;
+  border: 1px solid rgb(129, 129, 129);
+  cursor: pointer;
+  top: 50px;
+  left: 250px;
+}
+
+.cookie_btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+  transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
+  background-color: rgba(255,253,243,1);
+  opacity: 0;
+}
+
+.cookie_btn:hover::before {
+  opacity: 1;
+  transition-duration: .85s;
+  transform: translate3d(-50%,-50%,0) scale3d(1.2,1.2,1.2);
+}
+
+ .cookie_btn span {
+  z-index: 1;
+  position: relative;
+} 
+
+.cookie_btn:hover span {
+  color: hsl(0, 0%, 39%);
+}
+
+.built {
+  position: absolute;
+  bottom: 10px;
+  width: 120px;
+  height: 20px;
+  color: rgb(112, 112, 112);
+  left: 700px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(112, 112, 112);
+}
+
+a:hover {
+  color: rgb(201, 201, 201);
+}
+
+a:active {
+  color: rgb(112, 112, 112);
+}
+
+.icons {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  top: 20px;
+  right: 50px;
+}
+
+.xt {
+  position: absolute;
+  right: 60px;
+  color: black;
+  opacity: .6;
+  scale: 0.33;
+}
+
+.xt:hover {
+  opacity: 1;
+}
+
+.github {
+  position: absolute;
+  right: 0;
+  opacity: .6;
+  scale: 0.33;
+}
+
+.github:hover {
+  opacity: 1;
+}
+
+.overlay {
+  background-color: rgb(37, 37, 37);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  width: 1400px;
+  height: 750px;
+}
+
+.modalContainer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  width: 660px;
+  height: 210px;
+  border-radius: 10px;
+  padding: 20px 15px;
+  z-index: 4;
+  box-shadow: 0px 0px 7px 0px rgba(61, 61, 61, 0.75);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.btnFirst {
+  color: rgb(8, 107, 8);
+  font-weight: bold;
+  letter-spacing: .6px;
+  font-size: 1.2rem;
+}
+
+.btnSecond {
+  color: rgb(168, 0, 0);
+  font-weight: bold;
+  letter-spacing: .6px;
+  font-size: 1.2rem;
 }
