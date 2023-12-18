@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import { motion } from 'framer-motion';
-import styled, { useTheme } from 'styled-components';
 import Modal from './Modal';
 import { useState } from 'react';
 
@@ -11,11 +9,17 @@ function App() {
 
   return (
     <div className="App">
-      <div className='head'>
+      <motion.div initial={{ scale: 0 }} 
+      animate={{ scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 20 }}
+      className='head'>
         <h1 className='first_h'>UI Cookies</h1>
         <p className='description'>Template of cookies for website.</p>
         <button onClick={() => setOpenModal(true)} className='cookie_btn' id='btn_show'><span>Show me</span></button> 
-      </div>
+      </motion.div>
       <div className="icons">
         <div className="xt">
         <a href="https://twitter.com/PatrykR00" target='_blank'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
@@ -28,7 +32,9 @@ function App() {
         </svg></a>
         </div>
       </div>
+      <div className="footer">
         <p className='built'>Built by <a href="https://patryk-romanski.netlify.app" target='_blank'>Patryk</a></p>
+      </div>
       < Modal 
       open={openModal} 
       onClose={() => setOpenModal(false)} />

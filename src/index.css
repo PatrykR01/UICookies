@@ -30,10 +30,14 @@ html {
   height: 100%;
 }
 
+.App {
+  display: flex;
+}
+
 .head {
   position: fixed;
-  left: 50%;
-  top: 55%;
+  left: 30%;
+  top: 37%;
   transform: translate(-50%, -50%);
   display: inline-block;
   width: 600px;
@@ -94,14 +98,6 @@ html {
   color: hsl(0, 0%, 39%);
 }
 
-.built {
-  position: absolute;
-  bottom: 10px;
-  width: 120px;
-  height: 20px;
-  color: rgb(112, 112, 112);
-  left: 700px;
-}
 
 a {
   text-decoration: none;
@@ -157,12 +153,12 @@ a:active {
 
 .modalContainer {
   position: fixed;
-  left: 50%;
-  top: 50%;
+  left: 25%;
+  top: 28%;
   transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
-  width: 660px;
-  height: 210px;
+  width: 710px;
+  height: 360px;
   border-radius: 10px;
   padding: 20px 15px;
   z-index: 4;
@@ -171,20 +167,118 @@ a:active {
 
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 20px;
+}
+
+.buttons button {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 47%);
+  letter-spacing: .6px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid rgb(129, 129, 129);
+  width: 120px;
+  height: 40px;
 }
 
 .btnFirst {
   color: rgb(8, 107, 8);
-  font-weight: bold;
-  letter-spacing: .6px;
-  font-size: 1.2rem;
 }
 
 .btnSecond {
   color: rgb(168, 0, 0);
-  font-weight: bold;
-  letter-spacing: .6px;
-  font-size: 1.2rem;
 }
+
+.txt-1 {
+  font-size: 1.3rem;
+  padding: 10px;
+  
+}
+
+.txt-2 {
+  color: rgb(112, 112, 112);
+  padding: 6px 10px;
+}
+
+.txt-2 a {
+  text-decoration: underline;
+}
+
+.buttons button {
+  padding: 5px 24px;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons button span {
+  color: rgb(100, 100, 100);
+  position: relative;
+  z-index: 1;
+  transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.buttons button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 6px;
+  transform: translate(-100%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 3%, 86%);
+  transition: transform 0.5s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.buttons .btnFirst:hover span {
+  color: rgb(56, 165, 29);
+}
+
+.buttons .btnSecond:hover span {
+  color: rgb(161, 39, 39);
+}
+
+.buttons button:hover::before {
+  transform: translate(0, -50%);
+}
+
+.footer {
+  position: sticky;
+  width: 100px;
+  height: 30px;
+}
+
+.built {
+  position: fixed;
+  bottom: 10px;
+  left: 700px;
+  color: rgb(112, 112, 112);
+}
+
+@media screen and (max-width: 470px){
+  .icons {
+    scale: 1.2;
+    right: 33%;
+  }
+
+  .head {
+    scale: 1.05;
+    left: -20%;
+  }
+
+  .cookie_btn,
+  .cookie_btn::before {
+    scale: 1.5;
+  }
+
+  .modalContainer {
+
+  }
+}
+
+/* @media screen and (max-width: ){
+
+} */
