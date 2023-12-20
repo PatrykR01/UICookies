@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
+import "./index.css";
 
 const Modal = ({open, onClose}) => {
     if(!open) return null
