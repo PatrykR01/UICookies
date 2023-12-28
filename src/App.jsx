@@ -1,12 +1,12 @@
 import './index.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Modal from './Modal';
 import { useState } from 'react';
 
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
-
+  
   return (
     <div className="App">
       <motion.div initial={{ scale: 0 }} 
@@ -35,9 +35,9 @@ function App() {
       <div className="footer">
         <p className='built'>Built by <a href="https://patryk-romanski.netlify.app" target='_blank'>Patryk</a></p>
       </div>
-      < Modal 
-      open={openModal} 
-      onClose={() => setOpenModal(false)} />
+        < Modal 
+        open={openModal} 
+        onClose={() => setOpenModal(false)} />
     </div>
   );
 }
