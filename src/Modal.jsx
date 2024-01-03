@@ -25,8 +25,8 @@ const Modal = ({open, onClose}) => {
                     <p>This modal can be used on Your sites with styling on Your preferences.</p><br></br>
                     <p>You can add and style this as You wish and as You need.</p><br />
                     <p>Made by <a href="https://patryk-romanski.netlify.app" target='_blank'>Patryk</a> to start share with passion and knowledge to building in programming.</p><br />
-                    <p>I have been inspired by this <a href="https://twitter.com/emilkowalski_/status/1683832539490942978" target='_blank'>tweet</a>.</p><br />
-                    <p>Made with some components from <a href="https://emilkowal.ski/" target='_blank'>Emil</a> and <a href="https://www.framer.com/motion/" target='_blank'>Framer Motion</a>. Thank You for inspiration.</p>
+                    <p>I have been inspired by this <a href="https://twitter.com/emilkowalski_/status/1683832539490942978" target='_blank' rel="noopener">tweet</a>.</p><br />
+                    <p>Made with some components from <a href="https://emilkowal.ski/" target='_blank'>Emil</a> and <a href="https://www.framer.com/motion/" target='_blank' rel="noopener">Framer Motion</a>. Thank You for inspiration.</p>
                 </div>
                 <div className="buttons">
                     <button 
