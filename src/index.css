@@ -9,14 +9,14 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: rgba(255, 255, 255, 1);
-background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 31%, rgb(201, 201, 201) 100%);
-}
-
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 31%, rgb(201, 201, 201) 100%);
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+  
 .App {
-  height: 100vh;
+    height: 100vh;
 }
 
 .head {
@@ -244,13 +244,42 @@ a:active {
   color: rgb(112, 112, 112);
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 360px) and (max-width: 400px) {
   .icons {
     scale: 1.5;
+    left: 50%;
+  }
+  
+  .head {
+    scale: .95;
+    left: -25%;
+  }
+
+  .cookie_btn,
+  .cookie_btn::before {
+    scale: 1.5;
+  }
+
+  .modalContainer {
+    width: 360px;
+    height: 520px;
+    left: 5%;
+    top: 13%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .built {
+    left: 40%;
+    scale: 1.3;
+    bottom: 15px;
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 470px){
+@media screen and (min-width: 400px) and (max-width: 470px){
   .icons {
     scale: 1.3;
     left: 48%;
@@ -258,7 +287,7 @@ a:active {
 
   .head {
     scale: 1.05;
-    left: -15%;
+    left: -14%;
   }
 
   .cookie_btn,
@@ -299,13 +328,13 @@ a:active {
 
     .modalContainer {
       width: 420px;
-      height: 470px;
+      height: 460px;
       left: 13%;
       top: 20%;
     }
  
   .overlay {
-    width: 600px;
+    width: 100%;
     height: 100vh;
   }
 
@@ -316,10 +345,10 @@ a:active {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 690px) {
   .head {
-    scale: 1.3;
-    left: 10%;
+    scale: 1.15;
+    left: 5%;
   }
   
   .icons {
@@ -329,15 +358,15 @@ a:active {
 
   .modalContainer {
     width: 420px;
-    height: 470px;
-    scale: 1.25;
-    left: 22%;
+    height: 460px;
+    scale: 1.15;
+    left: 17%;
     top: 22%;
   }
 
   .overlay {
-    width: 768px;
-    height: 900px;
+    width: 100%;
+    height: 100vh;
   }
 
   .built {
@@ -348,10 +377,105 @@ a:active {
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 690px) and (max-width: 768px) {
+  .head {
+    scale: 1.2;
+    left: 10%;
+  }
+  
+  .icons {
+    scale: 1.6;
+    left: 50%;
+  }
+
+  .modalContainer {
+    width: 540px;
+    height: 430px;
+    scale: 1.1;
+    left: 14%;
+    top: 20%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .built {
+    scale: 1.4;
+    bottom: 15px;
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 880px) {
   .head {
     scale: 1.3;
-    left: 20%;
+    left: 15%;
+  }
+  
+  .icons {
+    scale: 1.6;
+    left: 50%;
+  }
+
+  .modalContainer {
+    width: 565px;
+    height: 410px;
+    scale: 1.1;
+    left: 17%;
+    top: 20%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .built {
+    scale: 1.4;
+    bottom: 15px;
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 881px) and (max-width: 992px) {
+  .head {
+    scale: 1.3;
+    left: 19%;
+  }
+  
+  .icons {
+    scale: 1.6;
+    left: 50%;
+  }
+
+  .modalContainer {
+    width: 565px;
+    height: 410px;
+    scale: 1.3;
+    left: 21%;
+    top: 23%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .built {
+    scale: 1.4;
+    bottom: 15px;
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1092px) {
+  .head {
+    left: 24%;
+    scale: 1.25;
+    justify-content: center;
+    align-items: center;
   }
   
   .icons {
@@ -362,48 +486,50 @@ a:active {
   .modalContainer {
     width: 570px;
     height: 420px;
-    scale: 1.25;
-    left: 21%;
-    top: 20%;
-  }
-
-  .overlay {
-    width: 990px;
-    height: 870px;
-  }
-
-  .built {
-    scale: 1.4;
-    bottom: 15px;
-    left: 45%;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .head {
-    scale: 1;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icons {
-    scale: 1;
-  }
-
-  .modalContainer {
-    width: 570px;
-    height: 420px;
-    scale: 1;
+    scale: 1.3;
     justify-content: center;
     align-items: center;
   }
 
   .overlay {
     width: 100%;
+    height: 100vh;
   }
 
   .built {
-    scale: 1;
+    scale: 1.4;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1093px) and (max-width: 1200px) {
+  .head {
+    left: 26%;
+    scale: 1.2;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icons {
+    left: 50%;
+    scale: 1.3;
+  }
+
+  .modalContainer {
+    width: 570px;
+    height: 420px;
+    scale: 1.2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .built {
+    scale: 1.4;
     justify-content: center;
   }
 }
