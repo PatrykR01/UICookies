@@ -15,9 +15,9 @@ function App() {
         type: "spring",
         stiffness: 200,
         damping: 20 }}
-      className='head'>
-        <h1 className='first_h'>UI Cookies</h1>
-        <p className='description'>Template of cookies for website.</p>
+      className="head">
+        <h1 className="first_h">UI Cookies</h1>
+        <p className="description">Template of cookies for website.</p>
         <button onClick={() => setOpenModal(true)} className='cookie_btn' id='btn_show'><span>Show me</span></button> 
       </motion.div>
       <div className="icons">
@@ -33,7 +33,7 @@ function App() {
         </div>
       </div>
       <div className="footer">
-        <p className='built'>Built by <a href="https://patryk-romanski.netlify.app" target='_blank'>Patryk</a></p>
+        <p className="built">Built by <a href="https://patryk-romanski.netlify.app" target='_blank'>Patryk</a></p>
       </div>
         < Modal 
         open={openModal} 
