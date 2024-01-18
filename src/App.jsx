@@ -9,6 +9,7 @@ function App() {
   
   return (
     <div className="App">
+      <AnimatePresence>
       <motion.div initial={{ scale: 0 }} 
       animate={{ scale: 1 }}
       transition={{
@@ -20,6 +21,7 @@ function App() {
         <p className="description">Template of cookies for website.</p>
         <button onClick={() => setOpenModal(true)} className='cookie_btn' id='btn_show'><span>Show me</span></button> 
       </motion.div>
+      </AnimatePresence>
       <div className="icons">
         <div className="xt">
         <a href="https://twitter.com/PatrykR00" target='_blank'><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
